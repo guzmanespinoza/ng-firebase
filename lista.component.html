@@ -1,0 +1,20 @@
+<br>
+<div class="container">
+    <p class="text-lead"><b>Lista de Tareas</b></p>
+    <div *ngFor="let item of items" class="alert alert-warning" role="alert">
+        <div class="row">
+            <div class="col-md-12">
+                {{item.name}} - {{item.id}}
+
+                <div class="float-right " (click)="delete(item)">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <div class="float-right mx-4" (click)="delete(item)">
+                    <i class="fas fa-edit"></i>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
